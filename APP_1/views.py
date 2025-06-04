@@ -21,7 +21,7 @@ def save(request):
 
 @ api_view(['GET'])
 def fetch(request):
-    Student.objects.create(names="Tara Maria",email="tara@gmail.com",password='123456',gender="Male",sports="soccer",education="College",)
+    # Student.objects.create(names="Tara Maria",email="tara@gmail.com",password='123456',gender="Male",sports="soccer",education="College",)
     students = Student.objects.all()
     serializer = StudentSerializer(students, many=True)
     return Response(serializer.data)
